@@ -6,6 +6,7 @@ from string import ascii_uppercase
 SCHEMA_NAME = "DWNOVA"
 TABLE_NAME = "trade"
 insert = 'INSERT INTO "<SCHEMA_NAME>".<TABLE_NAME> (<columns>) VALUES (<values>);'
+FILE_NAME = "table_schema.txt"
 
 
 def generate_random_number(n):
@@ -42,7 +43,7 @@ def get_insert_statements(lines_, inserts):
 
 
 if __name__ == "__main__":
-    file_ = open("ocbc_trade_columns.txt", "r+")
+    file_ = open(FILE_NAME, "r+")
 
     lines = file_.readlines()
     insert_statements = list()
