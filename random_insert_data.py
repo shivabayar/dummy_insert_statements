@@ -3,9 +3,9 @@ from random import choice
 from random import randint
 from string import ascii_uppercase
 
-schema_name = "DWNOVA"
-table_name = "trade"
-insert = 'INSERT INTO "<schema_name>".<table_name> (<columns>) VALUES (<values>);'
+SCHEMA_NAME = "DWNOVA"
+TABLE_NAME = "trade"
+insert = 'INSERT INTO "<SCHEMA_NAME>".<TABLE_NAME> (<columns>) VALUES (<values>);'
 
 
 def generate_random_number(n):
@@ -35,8 +35,8 @@ def get_insert_statements(lines_, inserts):
 
     insert_statement = string.replace(inserts, "<columns>", ','.join(c[0] for c in columns))
     insert_statement = string.replace(insert_statement, "<values>", ','.join(c[1] for c in columns))
-    insert_statement = string.replace(insert_statement, "<schema_name>", schema_name)
-    insert_statement = string.replace(insert_statement, "<table_name>", table_name)
+    insert_statement = string.replace(insert_statement, "<SCHEMA_NAME>", SCHEMA_NAME)
+    insert_statement = string.replace(insert_statement, "<TABLE_NAME>", TABLE_NAME)
 
     return insert_statement
 
