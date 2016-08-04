@@ -1,103 +1,34 @@
-CompanyCode,VARCHAR2,5
-TradeId,NUMBER,22
-MarketCode,VARCHAR2,2
-SecurityCode,VARCHAR2,9
-TradeCurrencyCode,VARCHAR2,3
-TradeDate,DATE,8
-TradeConditions,VARCHAR2,20
-TradeStatus,VARCHAR2,5
-SupervisorReleaseStatus,VARCHAR2,1
-StockExchangeCode,VARCHAR2,5
-TradeSetTypeCode,VARCHAR2,5
-TradeSetSubTypeCode,VARCHAR2,5
-TradeSetSubType2Code,VARCHAR2,5
-SIPIndicator,VARCHAR2,1
-TradeLegId,NUMBER,22
-TradeLegStatus,VARCHAR2,5
-PartyId,NUMBER,22
-PartySubAccountId,NUMBER,22
-ClientOrderReference,VARCHAR2,80
-BuyOrSell,VARCHAR2,1
-TradeTypeCode,VARCHAR2,5
-TradePrice,FLOAT,22
-TradeQuantity,FLOAT,22
-TradeAmount,FLOAT,22
-TradeTime,VARCHAR2,8
-RebateRate,FLOAT,22
-RebateAmount,FLOAT,22
-RebateBeneficiaryId,NUMBER,22
-RebateBeneficiarySubAccount,NUMBER,22
-AccrualInterestAmount,FLOAT,22
-ReasonCode,VARCHAR2,5
-SettlementCurrencyCode,VARCHAR2,3
-SettlementAmount,FLOAT,22
-SettlementDate,DATE,8
-TradeContractMessage,VARCHAR2,200
-RebookTradeId,NUMBER,22
-CancelTradeId,NUMBER,22
-LegSupervisorReleaseStatus,VARCHAR2,1
-SupervisorReleaseUserCode,VARCHAR2,8
-SupervisorReleaseDate,DATE,8
-TradeCreateUserCode,VARCHAR2,8
-TradeCreateDate,DATE,8
-NoteDescription,VARCHAR2,220
-ForeignExchangeIndicator,VARCHAR2,1
-ForeignExchangeExchangeRate,FLOAT,22
-ForeignExchangeFromAmount,FLOAT,22
-ForeignExchangeToAmount,FLOAT,22
-ForeignExchangeSettlementDate,DATE,8
-FXExchangeRateDirection,VARCHAR2,1
-TradeNetPrice,FLOAT,22
-OrderRef,VARCHAR2,80
-DeliveryTypeCode,VARCHAR2,5
-AccountManagerCode,VARCHAR2,8
-AccountManagerName,VARCHAR2,120
-BlockTradeQuantity,FLOAT,22
-RebateCurrencyCode,VARCHAR2,3
-ShareholderNumber,VARCHAR2,20
-ShareholderNumberType,VARCHAR2,20
-OriginalBlockTradeAmount,FLOAT,22
-OriginalAllocatedAmount,FLOAT,22
-OriginalAllocatedQuantity,FLOAT,22
-OriginalAllocatedPrice,FLOAT,22
-SettlementFeeChargeCode,VARCHAR2,5
-SettlementFeeChargeCurrency,VARCHAR2,3
-SettlementFeeAmount,FLOAT,22
-FirmAlertBIACode,VARCHAR2,20
-ClientGlobalCustodianPartyId,NUMBER,22
-ClientGlobalCustodianBIC,VARCHAR2,11
-ClientPlaceOfSettlementCode,VARCHAR2,11
-ChargeCode1,VARCHAR2,5
-TradeChargeAmount1,FLOAT,22
-TradeChargeCurrencyCode1,VARCHAR2,3
-ChargeCode2,VARCHAR2,5
-TradeChargeAmount2,FLOAT,22
-TradeChargeCurrencyCode2,VARCHAR2,3
-ChargeCode3,VARCHAR2,5
-TradeChargeAmount3,FLOAT,22
-TradeChargeCurrencyCode3,VARCHAR2,3
-ChargeCode4,VARCHAR2,5
-TradeChargeAmount4,FLOAT,22
-TradeChargeCurrencyCode4,VARCHAR2,3
-ChargeCode5,VARCHAR2,5
-TradeChargeAmount5,FLOAT,22
-TradeChargeCurrencyCode5,VARCHAR2,3
-ChargeCode6,VARCHAR2,5
-TradeChargeAmount6,FLOAT,22
-TradeChargeCurrencyCode6,VARCHAR2,3
-ChargeCode7,VARCHAR2,5
-TradeChargeAmount7,FLOAT,22
-TradeChargeCurrencyCode7,VARCHAR2,3
-ChargeCode8,VARCHAR2,5
-TradeChargeAmount8,FLOAT,22
-TradeChargeCurrencyCode8,VARCHAR2,3
-ChargeCode9,VARCHAR2,5
-TradeChargeAmount9,FLOAT,22
-TradeChargeCurrencyCode9,VARCHAR2,3
-ChargeCode10,VARCHAR2,5
-TradeChargeAmount10,FLOAT,22
-TradeChargeCurrencyCode10,VARCHAR2,3
-TradeSetTypeName,VARCHAR2,80
-TradeSetSubTypeName,VARCHAR2,80
-TradeSetSubType2Name,VARCHAR2,80
-TradeStatusName,VARCHAR2,80
+PartyId,NUMBER ,22,no data
+PartySubAccount,NUMBER ,22,no data
+MarketCode,VARCHAR2 ,2,no data
+SecurityTypeCode,VARCHAR2 ,5,no data
+SecuritySubTypeCode,VARCHAR2 ,5,no data
+ContactId,NUMBER ,22,
+AddressId,NUMBER ,22,
+DefaultAddressIndicator,VARCHAR2,1,
+AddressLine1,VARCHAR2 ,80,
+AddressLine2,VARCHAR2 ,80,
+AddressLine3,VARCHAR2 ,80,
+LocationCode,VARCHAR2 ,5,no data
+CountryCode,VARCHAR2 ,2,
+PostCode,VARCHAR2 ,20,no data
+StateProvinceCode,VARCHAR2 ,5,no data
+AddressLine4,VARCHAR2 ,80,
+ContactName,VARCHAR2 ,40,
+ContactName2,VARCHAR2 ,40,
+ContactSalutationCode,VARCHAR2 ,5,
+ContactSalutationCode2,VARCHAR2 ,5,
+ContactDepartmentDescription,VARCHAR2 ,40,
+DefaultContactIndicator,VARCHAR2,1,
+ContactMediumCode,VARCHAR2 ,5,
+ContactMediumValue,VARCHAR2 ,1000,
+ContactMediumDefaultIndicator,VARCHAR2 ,1,
+GroupEmailIndicator,VARCHAR2 ,1,
+SuppressTransmissionIndicator,VARCHAR2 ,1,no data
+VoiceCallStatus,VARCHAR2 ,5,no data
+TextMessageStatus,VARCHAR2 ,5,no data
+FaxMessageStatus,VARCHAR2 ,5,
+DncLastUpdateDate,DATE ,8,
+ContactUseCode,VARCHAR2 ,5,
+ContactUseName,VARCHAR2 ,80,
+TemplateCode,VARCHAR2,8,no data
