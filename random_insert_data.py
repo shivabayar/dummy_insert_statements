@@ -2,9 +2,10 @@ import string
 from random import choice
 from random import randint
 from string import ascii_uppercase
+import sys
 
-SCHEMA_NAME = "DWNOVA"
-TABLE_NAME = "trade"
+# SCHEMA_NAME = "DWNOVA"
+# TABLE_NAME = "trade"
 insert = 'INSERT INTO "<SCHEMA_NAME>".<TABLE_NAME> (<columns>) VALUES (<values>);'
 FILE_NAME = "table_schema.txt"
 
@@ -59,25 +60,27 @@ def get_insert_statements(lines_, inserts):
 
 def get_dummy_data(row_objs):
     line = ''
+    vals = list()
     for row in row_objs:
         opt_len = len(row.options)
         temp = ''
         if opt_len > 0 and row.options[0] != '':
-            temp += row.options[randint(0, opt_len - 1)]
+            temp = "'" + row.options[randint(0, opt_len - 1)] + "'"
         else:
             temp = ''
             if str(row.data_type).__contains__("VARCHAR2"):
-                temp = generate_random_str(int(row.size))
+                temp = "'" + str(generate_random_str(int(row.size))) + "'"
             elif str(row.data_type).__contains__("FLOAT"):
                 temp = str(float(generate_random_decimal(int(row.size))))
             elif str(row.data_type).__contains__("NUMBER"):
-                temp = generate_random_number(int(row.size))
+                temp = str(generate_random_number(int(row.size)))
             elif str(row.data_type).__contains__("DATE"):
-                temp = '2016/07/27 21:02:44'
+                temp = str("TO_DATE('01-Jul-16', 'dd-Mon-yy')")
 
-        line += str(temp) + ','
+        line += temp + ','
+        vals.append(temp)
 
-    print line
+    return vals
 
 
 def format_lines(all_lines):
@@ -123,27 +126,38 @@ def format_lines(all_lines):
 
 def get_header(row_objs):
     line = ''
+    line_list = list()
     for row in row_objs:
-        line += row.column_name + ','
+        line_list.append(row.column_name)
 
-    print line
+    return line_list
+
+
+def get_insert_statements(headers_, row_, schema, table, inserts):
+    insert_statement = string.replace(inserts, "<columns>", ','.join(c for c in headers_))
+    insert_statement = string.replace(insert_statement, "<values>", ','.join(c for c in row_))
+    insert_statement = string.replace(insert_statement, "<SCHEMA_NAME>", schema)
+    insert_statement = string.replace(insert_statement, "<TABLE_NAME>", table)
+    return insert_statement
 
 
 if __name__ == "__main__":
+    SCHEMA_NAME = sys.argv[1]
+    TABLE_NAME = sys.argv[2]
+
+    # SCHEMA_NAME = "DWNOVA"
+    # TABLE_NAME = "ACCOUNT_TABLE"
+
     file_ = open(FILE_NAME, "r+")
 
     lines = file_.readlines()
     insert_statements = list()
     rows = format_lines(lines)
-    get_header(rows)
-    i=10
-    while i > 0:
-        get_dummy_data(rows)
-        i-=1
+    headers = get_header(rows)
 
-    # for i in range(0, 100):
-    #     insert_statements.append(get_insert_statements(lines, insert))
-    #
-    # for i in insert_statements:
-    #     print i
+    i = 10
+    while i > 0:
+        dummy_row = get_dummy_data(rows)
+        print get_insert_statements(headers, dummy_row, SCHEMA_NAME, TABLE_NAME, insert)
+        i -= 1
     file_.close()
