@@ -1,15 +1,46 @@
-EmployeeCode, VARCHAR2 ,8,"1A
-1B
-29
-45
-8V
-AA
-LA
-LH
-WP
-asd3
-asd4
-nexus"
-DataGroupCode, VARCHAR2 ,5,
-DataFieldCode, VARCHAR2 ,5,
-DataFieldValue, VARCHAR2 ,101,
+LoanLimitCurrencyCode, VARCHAR2,5
+NetShortAdjustmentSum, VARCHAR2,5
+MarginDateTime, NUMBER,22
+PartyId, NUMBER,22
+MarginLiquidityIndicator, NUMBER,22
+PartySubAccount, NUMBER,22
+MarginLoanLimitIndicator, NUMBER,22
+PendingBuySettlementValue, NUMBER,22
+MarginMarketValueSum, VARCHAR2,5
+PendingSellSettlementValue, DATE,8
+MarginToleranceIndicator, DATE,8
+PtySubAccCashMarginAdj, VARCHAR2,5
+MarginValueCashCrpAct, NUMBER,22
+PtySubAccMarginableValAdj, VARCHAR2,5
+MarginValueCurrentSum, DATE,8
+PtySubAccMarginPercentage, NUMBER,22
+MarginValueNetSum, VARCHAR2,8
+RunType, VARCHAR2,400
+MarginValueTradeSum, VARCHAR2,3
+SCLAddBack, DATE,8
+MarketValueSum, NUMBER,22
+ShareTopUp, VARCHAR2,8
+NetAccountBalance, NUMBER,22
+Source, VARCHAR2,5
+SuggestedCallPercentage, VARCHAR2,3
+TradeAccountBalance, NUMBER,22
+TradeShortAdjustmentSum, NUMBER,22
+UnconfirmedSellValue, VARCHAR2,10
+SGDCallCurrentAccount, FLOAT,22
+SGDCallNetAccount, FLOAT,22
+SGDCallStockIndicator, FLOAT,22
+SGDCallTradeAccount, FLOAT,22
+AccruedCreditInterest, FLOAT,22
+AccruedDebitInterest, FLOAT,22
+AmountToSell, FLOAT,22
+AvailableCash, FLOAT,22
+CallWaiverIndicator, VARCHAR2,5
+CashAdjustmentAmount, VARCHAR2,20
+CompanyCode, FLOAT,22
+CurrencyCode, FLOAT,22
+CurrentAccountBalance, FLOAT,22
+CurrentShortAdjustmentSum, FLOAT,22
+DepositBalance, FLOAT,22
+HoldFundAmount, FLOAT,22
+LiquidateAmount, FLOAT,22
+LoanLimit, FLOAT,22

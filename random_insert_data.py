@@ -64,7 +64,7 @@ def get_dummy_data(row_objs):
         temp = ''
         if opt_len > 0 and row.options[0] != '':
             if str(row.data_type).__contains__("VARCHAR2"):
-                temp = "'" + row.options[randint(0, opt_len - 1)] + "'"
+                temp = row.options[randint(0, opt_len - 1)]
             elif str(row.data_type).__contains__("FLOAT"):
                 temp = str(float(row.options[randint(0, opt_len - 1)]))
             elif str(row.data_type).__contains__("NUMBER"):
