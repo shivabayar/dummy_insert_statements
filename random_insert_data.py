@@ -3,8 +3,6 @@ from random import choice
 from random import randint
 from string import ascii_uppercase
 
-import sys
-
 insert = 'INSERT INTO "<SCHEMA_NAME>".<TABLE_NAME> (<columns>) VALUES (<values>);'
 FILE_NAME = "table_schema.txt"
 
@@ -140,9 +138,6 @@ def get_header(row_objs):
 
 if __name__ == "__main__":
     file_ = open(FILE_NAME, "r+")
-
-    SCHEMA_NAME = sys.argv[1]
-    TABLE_NAME = sys.argv[2]
 
     lines = file_.readlines()
     insert_statements = list()

@@ -1,34 +1,15 @@
-PartyId,NUMBER ,22,no data
-PartySubAccount,NUMBER ,22,no data
-MarketCode,VARCHAR2 ,2,no data
-SecurityTypeCode,VARCHAR2 ,5,no data
-SecuritySubTypeCode,VARCHAR2 ,5,no data
-ContactId,NUMBER ,22,
-AddressId,NUMBER ,22,
-DefaultAddressIndicator,VARCHAR2,1,
-AddressLine1,VARCHAR2 ,80,
-AddressLine2,VARCHAR2 ,80,
-AddressLine3,VARCHAR2 ,80,
-LocationCode,VARCHAR2 ,5,no data
-CountryCode,VARCHAR2 ,2,
-PostCode,VARCHAR2 ,20,no data
-StateProvinceCode,VARCHAR2 ,5,no data
-AddressLine4,VARCHAR2 ,80,
-ContactName,VARCHAR2 ,40,
-ContactName2,VARCHAR2 ,40,
-ContactSalutationCode,VARCHAR2 ,5,
-ContactSalutationCode2,VARCHAR2 ,5,
-ContactDepartmentDescription,VARCHAR2 ,40,
-DefaultContactIndicator,VARCHAR2,1,
-ContactMediumCode,VARCHAR2 ,5,
-ContactMediumValue,VARCHAR2 ,1000,
-ContactMediumDefaultIndicator,VARCHAR2 ,1,
-GroupEmailIndicator,VARCHAR2 ,1,
-SuppressTransmissionIndicator,VARCHAR2 ,1,no data
-VoiceCallStatus,VARCHAR2 ,5,no data
-TextMessageStatus,VARCHAR2 ,5,no data
-FaxMessageStatus,VARCHAR2 ,5,
-DncLastUpdateDate,DATE ,8,
-ContactUseCode,VARCHAR2 ,5,
-ContactUseName,VARCHAR2 ,80,
-TemplateCode,VARCHAR2,8,no data
+EmployeeCode, VARCHAR2 ,8,"1A
+1B
+29
+45
+8V
+AA
+LA
+LH
+WP
+asd3
+asd4
+nexus"
+DataGroupCode, VARCHAR2 ,5,
+DataFieldCode, VARCHAR2 ,5,
+DataFieldValue, VARCHAR2 ,101,
