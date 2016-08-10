@@ -3,8 +3,8 @@ from random import choice
 from random import randint
 from string import ascii_uppercase
 
-SCHEMA_NAME = "DWNOVA"
-TABLE_NAME = "trade"
+import sys
+
 insert = 'INSERT INTO "<SCHEMA_NAME>".<TABLE_NAME> (<columns>) VALUES (<values>);'
 FILE_NAME = "table_schema.txt"
 
@@ -141,18 +141,16 @@ def get_header(row_objs):
 if __name__ == "__main__":
     file_ = open(FILE_NAME, "r+")
 
+    SCHEMA_NAME = sys.argv[1]
+    TABLE_NAME = sys.argv[2]
+
     lines = file_.readlines()
     insert_statements = list()
     rows = format_lines(lines)
     get_header(rows)
-    i=10
+    i = 10
     while i > 0:
         get_dummy_data(rows)
-        i-=1
+        i -= 1
 
-    # for i in range(0, 100):
-    #     insert_statements.append(get_insert_statements(lines, insert))
-    #
-    # for i in insert_statements:
-    #     print i
     file_.close()
