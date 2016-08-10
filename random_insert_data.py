@@ -33,6 +33,8 @@ def generate_random_decimal(size):
 
 
 def generate_random_str(size):
+    if size > 5:
+        size = 5
     return ''.join(choice(ascii_uppercase) for i in range(size))
 
 
@@ -63,7 +65,14 @@ def get_dummy_data(row_objs):
         opt_len = len(row.options)
         temp = ''
         if opt_len > 0 and row.options[0] != '':
-            temp += row.options[randint(0, opt_len - 1)]
+            if str(row.data_type).__contains__("VARCHAR2"):
+                temp = "'" + row.options[randint(0, opt_len - 1)] + "'"
+            elif str(row.data_type).__contains__("FLOAT"):
+                temp = str(float(row.options[randint(0, opt_len - 1)]))
+            elif str(row.data_type).__contains__("NUMBER"):
+                temp = str(int(row.options[randint(0, opt_len - 1)]))
+            elif str(row.data_type).__contains__("DATE"):
+                temp = str("TO_DATE('01-Jul-16', 'dd-Mon-yy')")
         else:
             temp = ''
             if str(row.data_type).__contains__("VARCHAR2"):
