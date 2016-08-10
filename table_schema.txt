@@ -1,16 +1,29 @@
-Company, VARCHAR2 ,5,28
-CostCentreCode, VARCHAR2 ,10,"T02
-C01
-"
-SubCostCentreCode, VARCHAR2 ,10,"A201
-NONE"
-PartyId, NUMBER ,22,
-PartySubAccount, NUMBER ,22,
-AccountCategory, VARCHAR2 ,5,CLTDL
-AccountSubCategoryCode, VARCHAR2 ,5,"AGTT
-CLCUR"
-Currency, VARCHAR2 ,3,
-BusinessDate, DATE ,8,
-ValueDateBalance, FLOAT ,22,
-UnclearChequeBalance, FLOAT ,22,
-HoldFundBalance, FLOAT ,22,
+CompanyCode, NUMBER ,22,no data
+MarketCode, NUMBER ,22,no data
+SecurityCode, FLOAT ,22,no data
+PartyId, FLOAT ,22,no data
+PartySubAccount, FLOAT ,22,no data
+CustodyAgentPartyId, VARCHAR2 ,35,no data
+CustodyAgentPartySubAccount, NUMBER ,22,no data
+CustodyAgentAccount, NUMBER ,22,no data
+ClearingAgentPartyId, NUMBER ,22,no data
+StockHoldingType, FLOAT ,22,no data
+StockHoldingCurrency, FLOAT ,22,no data
+StockHoldingId, FLOAT ,22,no data
+ConfirmedQuantity, NUMBER ,22,no data
+PendingInQuantity, FLOAT ,22,no data
+PendingOutQuantity, FLOAT ,22,no data
+AccumulatedProfit, VARCHAR2 ,2,no data
+StockHoldingAmount, FLOAT ,22,no data
+PendingInAmount, FLOAT ,22,no data
+PendingOutAmount, FLOAT ,22,no data
+TradeQuantity, FLOAT ,22,no data
+TradeBookValue, FLOAT ,22,no data
+RealisedProfitAndLoss, FLOAT ,22,no data
+EarmarkQuantity, VARCHAR2 ,5,no data
+AveragePurchasePrice, VARCHAR2 ,9,no data
+TradedQuantity, DATE ,8,no data
+AccruedInterest, VARCHAR2 ,5,no data
+LastAccruedInterestCalcDate, VARCHAR2 ,3,no data
+UnpaidQuantity,VARCHAR2,1,no data
+PartyRegistrationType, FLOAT ,22,no data
